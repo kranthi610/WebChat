@@ -8,7 +8,7 @@ $password = "";
 $dbname = "chat";
 */
 
-$servername = "herokuapp";
+$servername = "localhost";
 $username = "b2c29ca89ee067";
 $password = "4c4cec06";
 $dbname = "heroku_4b46c901d7863ba";
