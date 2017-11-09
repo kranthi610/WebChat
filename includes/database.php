@@ -7,14 +7,15 @@ $username = "root";
 $password = "";
 $dbname = "chat";
 */
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$servername = "b2c29ca89ee067@ip-10-44-181-66.ec2.internal";
-$username = "b2c29ca89ee067";
-$password = "4c4cec06";
-$dbname = "heroku_4b46c901d7863ba";
-echo " not also connected";
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($server, $username, $password, $db);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
