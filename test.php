@@ -1,4 +1,4 @@
 <?php
-echo "hello to heroku from my webchat";
+print_r( $_SERVER);
 
 ?>
